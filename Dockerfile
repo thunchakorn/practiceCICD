@@ -7,4 +7,6 @@ COPY . .
 RUN pip install --upgrade pip && \
     pip install uv && uv pip install --system -r requirements.txt
 
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "80"]
+EXPOSE 8080
+
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]
