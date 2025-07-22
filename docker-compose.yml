@@ -1,0 +1,10 @@
+services:
+  test-db:
+    image: pgvector/pgvector:pg16
+    restart: always
+    ports:
+      - "5436:5432"
+    environment:
+      POSTGRES_USER: username
+      POSTGRES_PASSWORD: pass123
+      POSTGRES_DB: test_db
